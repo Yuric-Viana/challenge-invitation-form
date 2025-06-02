@@ -74,7 +74,9 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-    background-color: #29292E;
+    background-color: var(--shape-background);
+    color: var(--text-body);
+    font-family: var(--text-body);
 
     zoom: 80%;
 }
