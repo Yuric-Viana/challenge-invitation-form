@@ -18,8 +18,69 @@
 
         <main>
             <div class="container-main">
+                <h2>Crie seu convite</h2>
+
+               <form>
+                    <fieldset>
+                        <legend class="title">
+                            <img src="assets/icons/calendar.svg" alt="Ícone de calendário">
+                            Sobre o evento
+                        </legend>
+
+                        <div class="grid">
+                            <label for="title">Título</label>
+
+                            <input class="input" type="text" name="title" id="title" placeholder="Nome do evento">
+                        </div>
+                    
+                        <div class="grid-col">
+                            <div class="grid">
+                                <label for="start">Início</label>
+                                <input class="input" type="text" id="start" name="start" placeholder="DD/MM/AAAA, --:--">
+                            </div>
+                            <div class="grid">
+                                <label for="end">Fim</label>
+                                <input class="input" type="text" id="end" name="end" placeholder="DD/MM/AAAA, --:--">
+                            </div>
+                        </div>
+
+                        <div class="grid-col">
+                            <div>
+                                <label for="type">Tipo</label>
+                                <div class="type">
+                                    <div class="personally">
+                                        <input type="radio" name="type" id="type">
+                                        <div class="type-img">
+                                            <img class="personally-img" src="assets/icons/building-2.svg" alt="Ícone de building">
+                                            <span>Presencial</span>
+                                        </div>
+                                    </div>
+                                    <div class="online">
+                                        <input type="radio" name="type" id="type">
+                                        <div class="type-img">
+                                            <img class="online-img" src="assets/icons/video.svg" alt="Ícone de câmera">
+                                            <span>Online</span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="location">
+                                <label for="location">Local</label>
+                                <input class="input location" type="text" id="location" name="location" placeholder="Link ou endereço">
+                            </div>
+                        </div>
+
+                        <div class="description">
+                            <label class="label" for="description">Descrição</label>
+                            <textarea rows="5" name="description" id="description" placeholder="Escreva sobre os detalhes do evento"></textarea>
+                        </div>
+                    </fieldset>
+               </form>
             </div>
         </main>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

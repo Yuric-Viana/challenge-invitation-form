@@ -3,6 +3,7 @@
     grid-template-columns: 40% 60%;
     justify-content: center;
 
+    gap: 1.25rem;
     padding: 1.25rem;
 
 }
@@ -10,8 +11,9 @@
 .container-aside {
     background-image: url(../assets/Background.svg);
     border-radius: 20px;
-    max-width: 18rem;
-    height: 37.5rem;
+    background-size: cover;
+    max-width: 25rem;
+    height: 45.5rem;
     margin-left: auto;
     padding: 3.25rem;
 
@@ -25,3 +27,17 @@
         font: var(--heading-sm);
     }
 }
+
+.container-main {
+    padding: 5rem 8.125rem;
+    background-color: var(--shape-body);
+    border-radius: 20px;
+    max-width: 51.25rem;
+
+    h2 {
+        margin-bottom: 2.625rem;
+        font: var(--heading-md);
+        color: var(--text-heading);
+    }
+}
+
