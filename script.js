@@ -6,7 +6,10 @@ const colorPickers = document.querySelectorAll('.color-picker');
 const check = document.getElementById('light');
 const label = document.querySelector('.light-type');
 const inputFile = document.getElementById('file');
-const error = document.querySelector('.error');
+const form = document.querySelector('form');
+let error = document.querySelector('.error-file');
+const errorInputs = form.querySelectorAll('input[required], textarea[required], select[required]');
+
 
 function alterarImg(link, caminho) {
     link.src = `assets/icons/${caminho}`;
@@ -48,15 +51,18 @@ inputFile.addEventListener('change', () => {
     const file = inputFile.files[0];
     const nameFile = document.querySelector('.file-select');
     const name = file.name;
-
-    nameFile.innerHTML = name;
+    
 
     if (file) {
-    if (!file.type.match('image/png') && !file.type.match('image/jpeg')) {
-        alert('Por favor, insira uma imagem PNG ou JPEG.');
-        error.style.opacity = '1';
-        inputFile.value = '';
-        return;
+        if (!file.type.match('image/png') && !file.type.match('image/jpeg')) {
+            alert('Por favor, insira uma imagem PNG ou JPEG.');
+            error.style.opacity = '1';
+            inputFile.value = '';
+            nameFile.innerHTML = `<p class="file-select">Nenhum arquivo selecionado</p>`
+            return;
+        } else {
+            nameFile.innerHTML = name;
+            error.style.opacity = '0';
+        }
     }
-}
 })

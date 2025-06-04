@@ -104,7 +104,6 @@ fieldset {
     align-items: center;
 
     & .file-select {
-        
         color: var(--input-placeholder);
     }
 
@@ -120,4 +119,16 @@ fieldset {
             margin-top: .4rem;
         }
     }
+}
+
+.contact label {
+    display: inline-block;
+    margin-bottom: 1rem;
+} 
+
+#mail + .error,
+#phone + .error,
+#description + .error,
+#location + .error{
+    margin-top: 1rem;
 }

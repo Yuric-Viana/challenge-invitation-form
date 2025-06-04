@@ -32,19 +32,35 @@
                         <div class="grid">
                             <label for="title">Título</label>
 
-                            <input class="input" type="text" name="title" id="title" placeholder="Nome do evento">
+                            <input class="input" type="text" name="title" id="title" placeholder="Nome do evento"
+                                required>
+                            <div class="error input-title">
+                                <img src="assets/icons/circle-alert.svg" alt="Ícone de alerta vermelho">
+                                <span>Campo obrigatório</span>
+                            </div>
                         </div>
 
                         <div class="grid-col">
                             <div class="grid">
                                 <label for="start">Início</label>
-                                <input class="input" type="text" id="start" name="start"
-                                    placeholder="DD/MM/AAAA, --:--">
+                                <input class="input" type="text" id="start" name="start" placeholder="DD/MM/AAAA, --:--"
+                                    required>
+                                <div class="error input-start">
+                                    <img src="assets/icons/circle-alert.svg" alt="Ícone de alerta vermelho">
+                                    <span>Campo obrigatório</span>
+                                </div>
                             </div>
+
                             <div class="grid">
                                 <label for="end">Fim</label>
-                                <input class="input" type="text" id="end" name="end" placeholder="DD/MM/AAAA, --:--">
+                                <input class="input" type="text" id="end" name="end" placeholder="DD/MM/AAAA, --:--"
+                                    required>
+                                <div class="error input-end">
+                                    <img src="assets/icons/circle-alert.svg" alt="Ícone de alerta vermelho">
+                                    <span>Campo obrigatório</span>
+                                </div>
                             </div>
+
                         </div>
 
                         <div class="grid-col">
@@ -65,22 +81,31 @@
                                             <img class="online-img" src="assets/icons/video.svg" alt="Ícone de câmera">
                                             <span>Online</span>
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
                             <div class="location">
                                 <label for="location">Local</label>
                                 <input class="input location" type="text" id="location" name="location"
-                                    placeholder="Link ou endereço">
+                                    placeholder="Link ou endereço" required>
+                                <div class="error input-location">
+                                    <img src="assets/icons/circle-alert.svg" alt="Ícone de alerta vermelho">
+                                    <span>Campo obrigatório</span>
+                                </div>
                             </div>
+
                         </div>
 
                         <div class="description">
                             <label class="label" for="description">Descrição</label>
                             <textarea rows="5" name="description" id="description"
-                                placeholder="Escreva sobre os detalhes do evento"></textarea>
+                                placeholder="Escreva sobre os detalhes do evento" required></textarea>
+                            <div class="error input-text-area">
+                                <img src="assets/icons/circle-alert.svg" alt="Ícone de alerta vermelho">
+                                <span>Campo obrigatório</span>
+                            </div>
                         </div>
+
                     </fieldset>
 
                     <fieldset id="customization">
@@ -195,7 +220,7 @@
                                             Selecionar
                                         </p>
                                     </div>
-                                    <div class="error">
+                                    <div class="error error-file">
                                         <img src="assets/icons/circle-alert.svg" alt="Ícone de alerta vermelho">
                                         <span>Error message</span>
                                     </div>
@@ -213,11 +238,34 @@
 
                         <div class="name">
                             <label for="name">Nome</label>
-                            <input class="input" type="email" name="mail" id="mail" placeholder="Nome completo"
-                                required>
+                            <input class="input" type="text" name="name" id="name" placeholder="Nome completo" required>
                             <div class="error">
                                 <img src="assets/icons/circle-alert.svg" alt="Ícone de alerta vermelho">
                                 <span>Campo obrigatório</span>
+                            </div>
+                        </div>
+
+                        <div class="grid-col contact">
+                            <div class="mail">
+                                <label for="mail">E-mail</label>
+                                <input class="input" type="email" name="mail" id="mail" required
+                                    placeholder="exemplo@email.com">
+
+                                <div class="error">
+                                    <img src="assets/icons/circle-alert.svg" alt="Ícone de alerta vermelho">
+                                    <span>Campo obrigatório</span>
+                                </div>
+                            </div>
+
+                            <div class="phone">
+                                <label for="phone">Telefone</label>
+                                <input class="input" type="text" name="phone" id="phone" required
+                                    placeholder="(99) 99999-9999 ">
+                                    
+                                <div class="error">
+                                    <img src="assets/icons/circle-alert.svg" alt="Ícone de alerta vermelho">
+                                    <span>Campo obrigatório</span>
+                                </div>
                             </div>
                         </div>
                     </fieldset>

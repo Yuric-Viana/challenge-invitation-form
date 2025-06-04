@@ -22,7 +22,6 @@ input[type="color"]::-webkit-color-swatch {
     border-radius: 50%;
 }
 
-
 .option-color {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(2.5rem, 1fr));
@@ -127,19 +126,27 @@ input[type="color"]::-webkit-color-swatch {
     margin-top: 1rem;
 }
 
-input {
+input,
+textarea {
     &:invalid {
         border: 2px solid var(--feedback);
     }
 
     &[required] + .error {
-        margin-top: 1rem;
         display: flex;
         gap: .5rem;
         color: var(--feedback);
     }
 
     &:valid + .error {
-        display: none;
+        opacity: 0;
     }
+
+    &:focus {
+        border-color: var(--brand-light);
+    }
+}
+
+#name {
+    margin-bottom: 1rem;
 }
