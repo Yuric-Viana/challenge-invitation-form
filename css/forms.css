@@ -104,11 +104,18 @@ fieldset {
     align-items: center;
 
     & .file-select {
-        margin-top: 2.5rem;
+        
         color: var(--input-placeholder);
     }
 
-    @media screen and (max-width: 1150px){
+    .error {
+        margin-top: 1rem;
+        display: flex;
+        gap: .5rem;
+        color: var(--feedback);
+    }
+
+    @media screen and (max-width: 1172px){
         .file-select {
             margin-top: .4rem;
         }
