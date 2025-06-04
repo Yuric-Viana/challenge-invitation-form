@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index.css">
     <title>Festivite</title>
 </head>
+
 <body>
     <div id="app">
         <aside>
@@ -20,8 +22,8 @@
             <div class="container-main">
                 <h2>Crie seu convite</h2>
 
-               <form>
-                    <fieldset>
+                <form>
+                    <fieldset id="event">
                         <legend class="title">
                             <img src="assets/icons/calendar.svg" alt="Ícone de calendário">
                             Sobre o evento
@@ -32,11 +34,12 @@
 
                             <input class="input" type="text" name="title" id="title" placeholder="Nome do evento">
                         </div>
-                    
+
                         <div class="grid-col">
                             <div class="grid">
                                 <label for="start">Início</label>
-                                <input class="input" type="text" id="start" name="start" placeholder="DD/MM/AAAA, --:--">
+                                <input class="input" type="text" id="start" name="start"
+                                    placeholder="DD/MM/AAAA, --:--">
                             </div>
                             <div class="grid">
                                 <label for="end">Fim</label>
@@ -51,7 +54,8 @@
                                     <div class="personally">
                                         <input type="radio" name="type" id="type">
                                         <div class="type-img">
-                                            <img class="personally-img" src="assets/icons/building-2.svg" alt="Ícone de building">
+                                            <img class="personally-img" src="assets/icons/building-2.svg"
+                                                alt="Ícone de building">
                                             <span>Presencial</span>
                                         </div>
                                     </div>
@@ -67,20 +71,162 @@
                             </div>
                             <div class="location">
                                 <label for="location">Local</label>
-                                <input class="input location" type="text" id="location" name="location" placeholder="Link ou endereço">
+                                <input class="input location" type="text" id="location" name="location"
+                                    placeholder="Link ou endereço">
                             </div>
                         </div>
 
                         <div class="description">
                             <label class="label" for="description">Descrição</label>
-                            <textarea rows="5" name="description" id="description" placeholder="Escreva sobre os detalhes do evento"></textarea>
+                            <textarea rows="5" name="description" id="description"
+                                placeholder="Escreva sobre os detalhes do evento"></textarea>
                         </div>
                     </fieldset>
-               </form>
+
+                    <fieldset id="customization">
+                        <legend class="title">
+                            <img src="assets/icons/paintbrush-vertical.svg" alt="Ícone de pincel">
+                            <span>Personalização</span>
+                        </legend>
+
+                        <div class="color grid">
+                            <label for="color">Cor principal</label>
+                            <div class="option-color">
+                                <input type="color" class="color-picker" name="color" id="blue" value="#6A59FF">
+                                <input type="color" class="color-picker" name="color" id="blue-light" value="#6A59FF">
+                                <input type="color" class="color-picker" name="color" id="pink" value="#FF59F9">
+                                <input type="color" class="color-picker" name="color" id="dark-pink" value="#FF598B">
+                                <input type="color" class="color-picker" name="color" id="orange" value="#FF5959">
+                                <input type="color" class="color-picker" name="color" id="orange-light" value="#FF8B59">
+                                <input type="color" class="color-picker" name="color" id="yellow" value="#FFCD59">
+                                <input type="color" class="color-picker" name="color" id="yellow-light" value="#E1FF59">
+                                <input type="color" class="color-picker" name="color" id="green" value="#59FF91">
+                                <input type="color" class="color-picker" name="color" id="green-light" value="#59FFF9">
+                            </div>
+                        </div>
+
+                        <div class="theme grid">
+                            <label for="theme">Tema do evento</label>
+
+                            <div class="theme-option">
+                                <div class="theme-selected">
+                                    <img src="assets/theme/Image.svg" alt="Imagem de bolo com velas">
+                                    <input type="radio" name="theme" id="bolo">
+                                    <label for="theme">Aniversário</label>
+                                </div>
+                                <div class="theme-selected">
+                                    <img src="assets/theme/Image-1.svg" alt="Imagem de festa infantil">
+                                    <input type="radio" name="theme" id="infantil">
+                                    <label for="theme">Infantil</label>
+                                </div>
+                                <div class="theme-selected">
+                                    <img src="assets/theme/Image-2.svg" alt="Imagem de formatura">
+                                    <input type="radio" name="theme" id="formatura">
+                                    <label for="theme">Formatura</label>
+                                </div>
+                                <div class="theme-selected">
+                                    <img src="assets/theme/Image-3.svg" alt="Imagem alianaças de casamento">
+                                    <input type="radio" name="theme" id="casemento">
+                                    <label for="theme">Casamento</label>
+                                </div>
+                                <div class="theme-selected">
+                                    <img src="assets/theme/Image-4.svg" alt="Imagem de fralda">
+                                    <input type="radio" name="theme" id="bebe">
+                                    <label for="theme">Chá de bebê</label>
+                                </div>
+                                <div class="theme-selected">
+                                    <img src="assets/theme/Image-5.svg" alt="Imagem de panelas">
+                                    <input type="radio" name="theme" id="panelas">
+                                    <label for="theme">Chá de panela</label>
+                                </div>
+                                <div class="theme-selected">
+                                    <img src="assets/theme/Image-6.svg" alt="Imagem de carnaval">
+                                    <input type="radio" name="theme" id="bolo">
+                                    <label for="theme">Carnaval</label>
+                                </div>
+                                <div class="theme-selected">
+                                    <img src="assets/theme/Image-7.svg" alt="Imagem de ovos da páscoa">
+                                    <input type="radio" name="theme" id="bolo">
+                                    <label for="theme">Páscoa</label>
+                                </div>
+                                <div class="theme-selected">
+                                    <img src="assets/theme/Image-8.svg" alt="Imagem de festa junina">
+                                    <input type="radio" name="theme" id="bolo">
+                                    <label for="theme">São joão</label>
+                                </div>
+                                <div class="theme-selected">
+                                    <img src="assets/theme/Image-9.svg" alt="Imagem de halloween">
+                                    <input type="radio" name="theme" id="halloween">
+                                    <label for="theme">Halloween</label>
+                                </div>
+                                <div class="theme-selected">
+                                    <img src="assets/theme/Image-10.svg" alt="Imagem de presentes de natal">
+                                    <input type="radio" name="theme" id="pessoas">
+                                    <label for="theme">Natal</label>
+                                </div>
+                                <div class="theme-selected">
+                                    <img src="assets/theme/Image-11.svg" alt="Imagem de pessoas">
+                                    <input type="radio" name="theme" id="outro">
+                                    <label for="theme">Outro</label>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="flex">
+                            <div class="style">
+                                <label for="light">Estilo</label>
+                                <div class="check">
+                                    <div class="light">
+                                        <div class="circle-img"></div>
+                                        <input type="checkbox" name="light" id="light">
+                                    </div>
+                                    <span class="light-type">Escuro</span>
+                                </div>
+                            </div>
+
+                            <div class="file">
+                                <div>
+                                    <label for="file">Foto de capa</label>
+                                    <div class="upload">
+                                        <img src="assets/icons/upload.svg" alt="Ícone de carregamento">
+                                        <input type="file" name="file" id="file" placeholder="Selecionar">
+                                        <p>
+                                            Selecionar
+                                        </p>
+                                    </div>
+                                    <div class="error">
+                                        <img src="assets/icons/circle-alert.svg" alt="Ícone de alerta vermelho">
+                                        <span>Error message</span>
+                                    </div>
+                                </div>
+                                <p class="file-select">Nenhum arquivo selecionado</p>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="data">
+                        <legend class="title">
+                            <img src="assets/icons/contact.svg" alt="Ícone de contato">
+                            <span>Dados para contato</span>
+                        </legend>
+
+                        <div class="name">
+                            <label for="name">Nome</label>
+                            <input class="input" type="email" name="mail" id="mail" placeholder="Nome completo"
+                                required>
+                            <div class="error">
+                                <img src="assets/icons/circle-alert.svg" alt="Ícone de alerta vermelho">
+                                <span>Campo obrigatório</span>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
             </div>
         </main>
     </div>
 
     <script src="script.js"></script>
 </body>
+
 </html>

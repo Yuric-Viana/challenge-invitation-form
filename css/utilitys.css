@@ -19,7 +19,7 @@
     align-items: center;
     color: var(--text-heading);
     font: var(--heading-sm);
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .input {
@@ -31,3 +31,4 @@
     border-radius: 10px;
     border: 1px solid var(--input-stroke);
 }
+

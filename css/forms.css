@@ -1,3 +1,8 @@
+form {
+    display: grid;
+    gap: 3rem;
+}
+
 fieldset {
     display: grid;
     gap: 1rem;
@@ -15,54 +20,12 @@ fieldset {
     background-color: var(--input-base);
 }
 
-.personally {
-    position: relative;
-    padding: .5rem;
-
-    &.personally input {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        inset: 0;
-        opacity: 0;
-    }
-
-    &:has(:checked) {
-        background-color: var(--shape-button);
-        border-radius: 5px;
-        width: 100%;
-        text-align: end;
-    }
-}
-
-.online {
-    position: relative;
-    margin-right: auto;
-    padding: .5rem;
-
-    &.online input {
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-        opacity: 0;
-    }
-
-    &:has(:checked) {
-        background-color: var(--shape-button);
-        border-radius: 5px;
-        width: 90%;
-        padding: .5rem;
-    }
-}
-
-
 .type-img {
     display: flex;
     align-items: center;
     gap: .5rem;
 
-    > img {
+    >img {
         width: 1.6rem;
     }
 }
@@ -70,20 +33,21 @@ fieldset {
 .location {
     padding-block: .36rem;
 
-    > label {
+    >label {
         margin-top: -.25rem;
     }
 }
 
 .location label {
     display: flex;
-    margin-bottom: .76rem;
+    margin-top: -.2rem;
+    margin-bottom: .8rem;
 }
 
 .description {
     display: grid;
-    
-    > #description {
+
+    >#description {
         all: unset;
         background-color: var(--input-base);
         padding: 1rem;
@@ -92,4 +56,61 @@ fieldset {
         border: 1px solid var(--input-stroke);
     }
 
+}
+
+.theme-option {
+    display: grid;
+    gap: 1rem .2rem;
+    grid-template-columns: repeat(auto-fit, minmax(8.735rem, 1fr));
+}
+
+.theme-selected {
+    display: grid;
+
+    border-radius: 6px;
+    width: max-content;
+    text-align: center;
+    position: relative;
+    background-color: var(--shape-button);
+    border: 1px solid var(--input-stroke);
+    padding: .25rem .25rem .8rem .25rem;
+    color: var(--text-heading);
+
+    & img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    & input {
+        position: absolute;
+        width: 100%;
+        opacity: 0;
+        height: 100%;
+    }
+
+    & label {
+        margin-top: 1rem;
+    }
+
+    &:has(:checked) {
+        outline: 2px solid var(--brand-light);
+    }
+}
+
+.file {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 1rem;
+    align-items: center;
+
+    & .file-select {
+        margin-top: 2.5rem;
+        color: var(--input-placeholder);
+    }
+
+    @media screen and (max-width: 1150px){
+        .file-select {
+            margin-top: .4rem;
+        }
+    }
 }
